@@ -5,11 +5,12 @@ import Skills from './Sections/Skills';
 import Qualification from './Sections/Qualification';
 import Recommendations from './Sections/Recommendations';
 import Header from './Sections/Header';
+import Feature from './Sections/Feature';
 
 function App() {
 
   return (
-    <div className="m-auto min-h-screen text-letter bg-mono" id="wrapper">
+    <div className="m-auto min-h-screen text-letter bg-mono dark" id="wrapper">
       <Header />
 
       {/* ======================= MAIN ==================== */}
@@ -18,6 +19,7 @@ function App() {
         <About />
         <Skills />
         <Qualification />
+        <Feature />
         <Recommendations />
         
         <section id="portfolio" className="pt-8 pb-16 portfolio"></section>

@@ -32,9 +32,9 @@ const education = [
 
 const projects = [
 {
-    label: "Forest AI",
+    label: "Forest Technologies",
     desc: "Frontend Developer",
-    time: "Jun - Aug 23"
+    time: "June - Aug 23"
 },
 {
     label: "Canlah",
@@ -44,23 +44,34 @@ const projects = [
 {
     label: "Luna",
     desc: "Fullstack Developer",
-    time: "Jul - Dec 22"
+    time: "July - Dec 22"
 },
 {
     label: "SquareArt",
     desc: "Backend Developer",
-    time: "May - Jun 22",
+    time: "May - June 22",
 },
 {
     label: "Maple",
     desc: "Frontend Developer",
-    time: "Jan - Jul 22",
+    time: "Jan - July 22",
 },
 {
     label: "Farmz",
     desc: "Fullstack Developer",
     time: "Aug - Dec 21"
 },
+];
+
+const responsible = [
+  "Built server-side logic and databases using programming languages such as Express or Go.",
+  "Optimized the database queries using aggregation pipelines with MongoDB.",
+  "Performed unit tests and maintained the codebase.",
+  "Refactor code to improve code readability and reduce complexity if necessary.",
+  "Developed user interfaces using HTML, CSS, and Typescript frameworks such as React, Angular, or Next.js.",
+  "Ensured that web applications were responsive and worked seamlessly across various devices and screen sizes using Tailwind CSS.",
+  "Debugging and troubleshooting issues across the application stack.",
+  "Collaborated effectively within cross-functional teams.",
 ];
 
 export default function Qualification() {
@@ -84,11 +95,21 @@ export default function Qualification() {
                 </div>
               ))}
             </div>
+            {activeTab == 0 && (
+              <div className="mx-6 flex flex-col text-justify gap-2 mb-4">
+              <span>In late 2020, I decided to switch my career to IT. By mid-2021, I joined a company in Singapore, <span className="font-semibold">Forest Ai Pte. Ltd.</span>, as a professional software engineer. I was responsible for:</span>
+              <ul className="list-disc list-outside">
+                {responsible.map((data) => (
+                  <li key={data} className="ml-5">{data}</li>
+                ))}
+              </ul>
+            </div>
+            )}
             <div className="mx-6 md:flex md:justify-center">
               {activeQual.map((qual, index) => (
                 <div key={`${qual.label} - ${index}`} className="grid grid-cols-[1fr_max-content_1fr] md:grid-rows-[max-content] md:grid-cols-none gap-6 md:w-[250px]">
                   {index % 2 !== 0 && <div className="md:hidden"></div>}
-                  <div className={index % 2 !== 0 ? "order-last" : "md:order-last"}>
+                  <div className={twMerge('flex flex-col justify-center', index % 2 !== 0 ? "order-last" : "md:order-last")}>
                     <div className="text-sm text-second-lighter mb-3 md:text-center">{qual.time}</div>
                     <h3 className="text-base font-medium text-title md:text-center">{qual.label}</h3>
                     <span className="inline-block text-sm mb-4 md:text-center w-full">{qual.desc}</span>

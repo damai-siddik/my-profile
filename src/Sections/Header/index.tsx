@@ -46,15 +46,15 @@ export default function Header() {
 
     useEffect(() => {
         const targetClass = document.getElementById("wrapper");
-        if (theme && theme === 'dark' ) {
-        targetClass?.classList.add('dark')
+        if (theme && theme !== 'dark' ) {
+            targetClass?.classList.remove('dark')
         } else {
-        targetClass?.classList.remove('dark')
+            targetClass?.classList.add('dark')
         }
     }, [theme])
 
     const changeTheme = () => {
-        const newTheme = theme && theme === 'dark' ? 'light' : 'dark';
+        const newTheme = theme && theme !== 'dark' ? 'dark' : 'light';
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);
     }
@@ -80,7 +80,7 @@ export default function Header() {
 
             {/* LIST MENU */}
             <div className="flex items-center">
-                <i className={twMerge("uil", theme === 'dark' ? 'uil-sun' : 'uil-moon')}
+                <i className={twMerge("uil", theme && theme !== 'dark' ? 'uil-moon' : 'uil-sun')}
                 onClick={changeTheme}>
                 </i>
                 <div className="text-lg cursor-pointer text-title font-medium ml-4">

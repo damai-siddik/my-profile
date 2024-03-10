@@ -26,6 +26,7 @@ module.exports = {
         title:  `var(--title-color)`,
         lighter: `var(--first-color-lighter)`,
         "second-lighter": "var(--text-color-light)",
+        second: `var(--first-color-second)`,
       },
       boxShadow: {
         modal: '0 -1px 4px rgba(0,0,0,.15)',

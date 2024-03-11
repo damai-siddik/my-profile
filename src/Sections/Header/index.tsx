@@ -80,12 +80,13 @@ export default function Header() {
 
             {/* LIST MENU */}
             <div className="flex items-center">
-                <i className={twMerge("uil", theme && theme !== 'dark' ? 'uil-moon' : 'uil-sun')}
-                onClick={changeTheme}>
+                <i className={twMerge("cursor- md:text-lg uil", theme && theme !== 'dark' ? 'uil-moon' : 'uil-sun')}
+                    onClick={changeTheme}>
                 </i>
-                <div className="text-lg cursor-pointer text-title font-medium ml-4">
-                <i className="uil uil-apps" onClick={openMenuList}></i>
-                </div>
+                {/* TODO: Make a list for menu */}
+                {/* <div className="text-lg cursor-pointer text-title font-medium ml-4">
+                    <i className="uil uil-apps" onClick={openMenuList}></i>
+                </div> */}
             </div>
             </nav>
         </header>

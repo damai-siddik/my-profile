@@ -26,7 +26,7 @@ export default function Skills() {
                 </div>
                 <div className="grid grid-cols-3 gap-4 grid-flow-row">
                   {skill.tech?.map((tech) => (
-                    <div key={tech} className="border-primary hover:bg-primary hover:text-white border rounded-lg py-2 text-center justify-center font-medium flex items-center">
+                    <div key={tech} className="border-primary hover:bg-primary hover:text-white border rounded-lg px-1 py-2 text-center justify-center font-medium flex items-center">
                       {tech}
                     </div>
                   ))}

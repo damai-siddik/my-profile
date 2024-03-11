@@ -97,7 +97,7 @@ export default function Qualification() {
             </div>
             {activeTab == 0 && (
               <div className="mx-6 flex flex-col text-justify gap-2 mb-4">
-              <span>In late 2020, I decided to switch my career to IT. By mid-2021, I joined a company in Singapore, <span className="font-semibold">Forest Ai Pte. Ltd.</span>, as a professional software engineer. I was responsible for:</span>
+              <span>In late 2020, I decided to switch my career to IT. By mid-2021, I joined a company in Singapore, <span className="font-semibold">Forest Ai Pte. Ltd.</span>, as a professional software engineer and was involved in several projects. I was responsible for:</span>
               <ul className="list-disc list-outside">
                 {responsible.map((data) => (
                   <li key={data} className="ml-5">{data}</li>

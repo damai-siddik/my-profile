@@ -64,7 +64,7 @@ export default function Recommendations() {
           </div> */}
           <ul className="columns-1 md:columns-2 block">
             {recommendations.map((data, index) => (
-              <li key={data.name} className={twMerge('flex-col justify-center text-justify mx-2 mb-5 shadow-chat p-6 rounded-xl text-title break-inside-avoid bg-primary bg-second', !more && index > 2 ? 'hidden md:block' : 'flex')}>
+              <li key={data.name} className={twMerge('flex-col justify-center text-justify mx-6 md:mx-1 mb-5 shadow-chat p-6 rounded-xl text-title break-inside-avoid bg-second hover:scale-105 duration-300', !more && index > 2 ? 'hidden md:block' : 'flex')}>
                 <div className="flex flex-row gap-2">
                   <img src={`/people/${data.photo}`} className="rounded-full w-12 h-12" />
                   <div>

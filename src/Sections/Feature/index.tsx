@@ -80,7 +80,7 @@ export default function Feature() {
                 modules={[Navigation, Pagination, Autoplay]}
             >
                 {projects.map((data) => (
-                    <SwiperSlide key={data.name} className="w-full snap-start grid gap-6 mb-10 md:bg-second rounded-3xl">
+                    <SwiperSlide key={data.name} className="w-full snap-start grid gap-6 mb-10 md:bg-second rounded-3xl cursor-pointer">
                         <img onClick={() => window.open(data.link)} src={`/project/${data.image}.webp`} alt="image" className="w-full h-72 md:p-6 object-contain md:object-fill md:rounded-[40px]" />
                     </SwiperSlide>
                 ))}

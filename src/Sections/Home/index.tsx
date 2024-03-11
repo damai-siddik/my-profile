@@ -19,7 +19,7 @@ const socialMediaList = [
     },
     {
       label: 'linkedin',
-      icon: 'linkedin-alt',
+      icon: 'linkedin',
       link: 'https://www.linkedin.com/in/damai-siddik/',
     },
 ];
@@ -32,19 +32,20 @@ export default function Home() {
               <div className="bg-inherit">
                 <img src="/damai.jpeg" alt="image" className='rounded-full w-[200px] h-[195px]' />
               </div>
-              <div className='flex flex-row gap-4 items-center w-full justify-center'>
-                {socialMediaList.map((socialMedia) => (
-                  <i key={socialMedia.label} className={`uil uil-${socialMedia.icon} text-primary text-2xl`} onClick={() => window.open(socialMedia.link)}></i>  
-                ))}
-              </div>
             </div>
             <div className='w-full text-center flex flex-col items-center justify-center md:items-start md:max-w-fit'>
-              <h1 className="text-3xl md:text-5xl font-bold text-title">Hi, I'm Damai</h1>
+              <h1 className="text-3xl md:text-5xl font-bold text-title mb-6">Hi, I'm Damai</h1>
               {/* <h3 className='text-lg md:text-xl text-letter font-medium my-3'>Software Engineer</h3> */}
-              <p className="my-6 text-justify">A passionate software engineer driven by enthusiasm and equipped with experience. I am deeply committed to continuous learning and growth.</p>
-              <Button className="bg-primary text-white"
+              <p className="text-justify mb-5">A passionate software engineer driven by enthusiasm and equipped with experience. I am deeply committed to continuous learning and growth.</p>
+              <div className='flex flex-row gap-4 items-end h-10'>
+                {socialMediaList.map((socialMedia) => (
+                  <i key={socialMedia.label} className={`uil uil-${socialMedia.icon} text-primary text-3xl hover:scale-125 cursor-pointer`} onClick={() => window.open(socialMedia.link)}></i>  
+                ))}
+              </div>
+              {/* TODO: Make the contact to be footer */}
+              {/* <Button className="bg-primary text-white"
                 endIcon={<i className='uil uil-message' />}
-                onClick={() => console.log('contact me')}>Contact Me</Button>
+                onClick={() => console.log('contact me')}>Contact Me</Button> */}
             </div>
           </div>
         </section>

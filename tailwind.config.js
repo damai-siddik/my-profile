@@ -31,7 +31,22 @@ module.exports = {
       boxShadow: {
         modal: '0 -1px 4px rgba(0,0,0,.15)',
         chat: "0px 16px 24px 0px rgba(96, 97, 112, 0.16), 0px 2px 8px 0px rgba(40, 41, 61, 0.04)",
-      }
+      },
+      animation: {
+        fly: 'fly 5s infinite',
+      },
+      keyframes: {
+        fly: {
+          "0%": {
+            transform: 'translateY(10%)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+          "100%": {
+            transform: 'translateY(-150%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+        },
+      },
     },
   },
   plugins: [],

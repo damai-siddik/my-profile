@@ -1,5 +1,8 @@
 import React from "react";
 import Button from "../../Components/Button";
+// import Lottie, { LottiePlayer } from "lottie-react";
+import groovyWalkAnimation from "./muslim.json";
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 const aboutMeData = [
     {
@@ -15,12 +18,14 @@ const aboutMeData = [
 export default function About() {
     return (
         <section id="about" className="pt-8 pb-16 about">
-          <h2 className="text-center text-title text-2xl md:text-4xl font-semibold mb-8">About Me</h2>
+          <h2 className="text-center text-title text-2xl md:text-4xl font-semibold md:mb-8">About Me</h2>
           {/* <span className="text-center block text-sm mb-8">My Introduction</span> */}
-          <div className="flex flex-col md:flex-row md:justify-between items-center gap-8 mx-6">
+          <div className="flex flex-col md:flex-row md:justify-between items-center mx-6 relative gap-8">
             {/* Second Image */}
-            <img src="/damai-2.jpeg" className="w-[200px] h-[200px] rounded-full object-cover" />
-            <div className="flex flex-col gap-4">
+            {/* <Lottie animationData={groovyWalkAnimation} loop={true} style={{ height: 300 }} /> */}
+            <Player src={groovyWalkAnimation} autoplay loop className="w-[200px]" ></Player>
+            {/* <img src="/image.png" className="md:w-1/2 h-auto rounded-full object-cover" /> */}
+            <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-row gap-16 justify-evenly md:justify-start">
                 {aboutMeData.map((data) => (
                   <div key={data.label}>

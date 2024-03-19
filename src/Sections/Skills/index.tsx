@@ -23,26 +23,9 @@ export default function Skills() {
     return (
         <section id="skills" className="pt-8 pb-16 skills relative mx-6">
             <h2 className="text-center font-semibold text-2xl md:text-4xl text-title mb-8">Skills</h2>
-            {/* <div className="flex flex-col md:flex-row justify-center gap-10 mx-6 ">
-              {skills.map((skill, index) => (
-                  <div key={skill.label} className="flex flex-col gap-6 max-w-[500px] w-full">
-                  <div className="flex flex-row items-center cursor-pointer gap-2 justify-center">
-                    <i className={`uil uil-${skill.icon} text-primary`}></i>
-                    <h1 className="text-title font-semibold text-lg">{skill.label}</h1>
-                  </div>
-                  <div className="grid grid-cols-3 gap-4 grid-flow-row">
-                    {skill.tech?.map((tech) => (
-                      <div key={tech} className="border-primary hover:bg-primary hover:text-white border rounded-lg px-1 py-2 text-center justify-center font-medium flex items-center">
-                        {tech}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div> */}
             <div className="flex flex-col gap-8 md:gap-0">
               {skills.map((skill, index) => (
-                <div className={twMerge("flex justify-between items-center relative w-full overflow-hidden", index % 2 === 0 ? "flex-row" : "flex-row-reverse" )}>
+                <div key={skill.label} className={twMerge("flex justify-between items-center relative w-full overflow-hidden", index % 2 === 0 ? "flex-row" : "flex-row-reverse" )}>
                   <div key={skill.label} className="flex flex-col gap-6 w-full md:w-1/2 justify-center">
                     <div className="flex flex-row items-center cursor-pointer gap-2 justify-center">
                       <i className={`uil uil-${skill.icon} text-primary`}></i>

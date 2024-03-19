@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 interface LineStepperData {
     time: string;
     label: string;
-    desc?: string;
+    link?: string;
     image?: string;
     role: string;
 }
@@ -15,11 +15,16 @@ interface LineStepperProps {
 }
 
 export default function LineStepper({data}: LineStepperProps) {
+    const openLink = (link?: string) => {
+        if (isEmpty(link)) return;
+        
+        window.open(link);
+    }
     return (
         <div className="mx-6 flex flex-col w-full">
             {data.map((qual, index) => (
                 <div key={`${qual.label} - ${index}`} className="flex flex-row gap-4 relative">
-                    <div className="order-last my-2 flex flex-row items-center gap-2 p-4 rounded-lg hover:shadow-chat w-full cursor-pointer group">
+                    <div className="order-last my-2 flex flex-row items-center gap-2 p-4 rounded-lg hover:shadow-chat w-full cursor-pointer group" onClick={() => openLink(qual.link)}>
                         {!isEmpty(qual.image) && <img src={qual.image} className="w-[250px] h-fit rounded object-contain bg-second p-2" />}
                         <div className="flex flex-col">
                             <div className="text-sm text-second-lighter mb-3 group-hover:text-primary group-hover:font-semibold">{qual.time}</div>

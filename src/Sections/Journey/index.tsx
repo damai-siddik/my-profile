@@ -28,42 +28,42 @@ const projects = [
         role: "Frontend Developer",
         time: "June 23 - Aug 23",
         image: "/project/forest.webp",
-        desc: "",
+        link: "https://theforest.ai/",
     },
     {
         label: "Canlah",
         role: "Fullstack Developer",
         time: "Nov 22 - May 23",
         image: "/project/canlah.webp",
-        desc: "",
+        link: "https://store.canlah.com/",
     },
     {
         label: "Luna",
         role: "Fullstack Developer",
         time: "July 22 - Dec 22",
         image: "/project/luna.webp",
-        desc: "Automate visibility and alignment of all stakeholders, orchestrate launches beyond the siloed tasks and ship high-quality products together.",
+        link: "https://www.withluna.ai/",
     },
     {
         label: "SquareArt",
         role: "Backend Developer",
         time: "May 22 - June 22",
         image: "/project/squareart.webp",
-        desc: "SquareArt is a dedicated art marketplace that offers a diverse selection of original artwork from artists worldwide.",
+        link: "https://squareart.exchange/",
     },
     {
         label: "Maple",
         role: "Frontend Developer",
         time: "Jan 22 - July 22",
         image: "/project/maple.webp",
-        desc: "Maple Haus is a homeowners community platform to share ideas, inspirations, decoration tips, renovation journeys, and other home-related matters. Synergising with our parent company, Forest AI, we innovate and bring forward creativity for a better living experience with advanced technology in mind."
+        link: "https://www.maple.haus/",
     },
     {
         label: "Farmz",
         role: "Fullstack Developer",
         time: "Aug 21 - Dec 21",
         image: "/project/farmz.webp",
-        desc: "Farmz is in the business of education and consultancy to get more people to understand the importance of living a healthy lifestyle. Farmz provides customers with the knowledge, sources & program's when it comes to Food Education, Juicing, Healthy Cooking, and Baking.",
+        link:  "https://www.farmzasia.com/",
 
     },
 ];

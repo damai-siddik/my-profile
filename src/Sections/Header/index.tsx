@@ -62,7 +62,7 @@ export default function Header() {
     return (
         <header className="shadow-modal w-full fixed bottom-0 md:top-0 h-fit left-0 z-[100] bg-mono" id="header">
             <nav className="flex justify-between items-center h-12 mx-6 lg:max-w-[968px] lg:mx-auto lg:px-6">
-            <a href="#" className="no-underline text-title hover:text-primary font-medium block">Damai Yulianti Siddik</a>
+            <a href="#" className="no-underline text-letter hover:text-primary font-medium block">Damai Yulianti Siddik</a>
             
             {openMenu && (
                 <div className="bottom-0 md:top-0 fixed left-0 w-full bg-mono pt-8 px-6 pb-16 shadow-modal rounded-t-3xl duration-300">

@@ -1,85 +1,13 @@
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
-
-const tabs = [
-    {
-      icon: "briefcase-alt",
-      label: "Experience"
-    },
-    {
-      icon: "graduation-cap",
-      label: "Education",
-    },
-];
-
-const education = [
-{
-    label: "Banking IT - Back End",
-    desc: "Digitalent - Rakamin Academy",
-    time: "July 21 - Oct 21",
-},
-{
-    label: "Backend Development",
-    desc: "Glints Academy powered by Binar Academy",
-    time: "Dec 20 - March 21"
-},
-{
-    label: "Economics",
-    desc: "Andalas University",
-    time: "Aug 12 - Jan 18",
-},
-];
-
-const projects = [
-{
-    label: "Forest Technologies",
-    desc: "Frontend Developer",
-    time: "June - Aug 23"
-},
-{
-    label: "Canlah",
-    desc: "Fullstack Developer",
-    time: "Nov 22 - May 23"
-},
-{
-    label: "Luna",
-    desc: "Fullstack Developer",
-    time: "July - Dec 22"
-},
-{
-    label: "SquareArt",
-    desc: "Backend Developer",
-    time: "May - June 22",
-},
-{
-    label: "Maple",
-    desc: "Frontend Developer",
-    time: "Jan - July 22",
-},
-{
-    label: "Farmz",
-    desc: "Fullstack Developer",
-    time: "Aug - Dec 21"
-},
-];
-
-const responsible = [
-  "Built server-side logic and databases using programming languages such as Express or Go.",
-  "Optimized the database queries using aggregation pipelines with MongoDB.",
-  "Performed unit tests and maintained the codebase.",
-  "Refactor code to improve code readability and reduce complexity if necessary.",
-  "Developed user interfaces using HTML, CSS, and Typescript frameworks such as React, Angular, or Next.js.",
-  "Ensured that web applications were responsive and worked seamlessly across various devices and screen sizes using Tailwind CSS.",
-  "Debugging and troubleshooting issues across the application stack.",
-  "Collaborated effectively within cross-functional teams.",
-];
+import { education, projects, tabs } from "./data";
 
 export default function Qualification() {
     const [activeTab, setActiveTab] = useState(0);
     const [activeQual, setActiveQual] = useState(projects);
 
     return (
-        <section id="qualification" className="pt-8 pb-16 qualification">
+        <section id="qualification" className="pt-8 pb-16 qualification lg:max-w-[968px] m-auto">
           <h2 className="text-center font-semibold text-2xl md:text-4xl text-title mb-8">Personal Journey</h2>
           <div className="mb-6 m-auto">
             <div className="flex justify-evenly mb-8">
@@ -95,15 +23,20 @@ export default function Qualification() {
                 </div>
               ))}
             </div>
-            {activeTab == 0 && (
+            {activeTab === 0 ? (
               <div className="mx-6 flex flex-col text-justify gap-2 mb-4">
-              <span>In late 2020, I decided to switch my career to IT. By mid-2021, I joined a company in Singapore, <span className="font-semibold">Forest Ai Pte. Ltd.</span>, as a professional software engineer and was involved in several projects. I was responsible for:</span>
-              <ul className="list-disc list-outside">
-                {responsible.map((data) => (
-                  <li key={data} className="ml-5">{data}</li>
-                ))}
-              </ul>
+                <span>In late 2020, I decided to switch my career to IT. By mid-2021, I joined a company in Singapore, <span className="font-semibold">Forest Ai Pte. Ltd</span>, as a professional software engineer and was involved in several projects.</span>
+                {/* <ul className="list-disc list-outside">
+                  {responsible.map((data) => (
+                    <li key={data} className="ml-5">{data}</li>
+                  ))}
+                </ul> */}
             </div>
+            ): (
+              <div className="mb-6 flex flex-col gap-3 mx-6 text-justify">
+                <div>I am a graduate in economics who has a strong foundation in economic theory, analysis, and research. As I engaged in discussions about the developments in the world during the COVID-19 pandemic, I realized that information technology was rapidly advancing and exerting a significant influence across various sectors.</div>
+                <div>Delving deeper into this field, I discovered a newfound passion for technology and its transformative potential in diverse industries. Recognizing the increasing demand for IT skills, I decided to switch my career and took several bootcamps to support my skills for it.</div>
+                </div>
             )}
             <div className="mx-6 md:flex md:justify-center">
               {activeQual.map((qual, index) => (

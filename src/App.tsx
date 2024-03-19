@@ -1,11 +1,11 @@
 import React from 'react';
+import Header from './Sections/Header';
 import Home from './Sections/Home';
 import About from './Sections/About';
 import Skills from './Sections/Skills';
-import Qualification from './Sections/Qualification';
 import Recommendations from './Sections/Recommendations';
-import Header from './Sections/Header';
-import Feature from './Sections/Feature';
+import Footer from './Sections/Footer';
+import Journey from './Sections/Journey';
 
 function App() {
 
@@ -18,13 +18,10 @@ function App() {
         <Home />
         <About />
         <Skills />
-        <Qualification />
-        <Feature />
+        <Journey />
         <Recommendations />
-        
-        <section id="portfolio" className="pt-8 pb-16 portfolio"></section>
-        <section id="project" className="pt-8 pb-16 project"></section>
       </main>
+      <Footer />
     </div>
   );
 }

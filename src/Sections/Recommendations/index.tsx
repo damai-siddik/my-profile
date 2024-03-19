@@ -45,23 +45,9 @@ export default function Recommendations() {
     const [more, setMore] = useState(false);
 
     return (
-        <section id="recommendations" className="pt-8 pb-16 recommendations">
+        <section id="recommendations" className="pt-8 pb-16 md:pb-8 recommendations mx-6">
           <h2 className="text-center font-semibold text-2xl md:text-4xl text-title">Recommendations</h2>
           <span className="text-center block mb-8 text-sm">What they say about me</span>
-          {/* <div className="flex flex-col gap-3 mb-4">
-            {recommendations.map((data, index) => (
-              <div key={data.name} className={twMerge('flex-col justify-center text-justify mx-2 mb-5 shadow-chat p-6 rounded-xl text-title', !more && index > 2 ? 'hidden' : 'flex')}>
-                <div className="flex flex-row gap-2">
-                  <img src={`/people/${data.photo}`} className="rounded-full w-12 h-12" />
-                  <div>
-                    <div className="text-lg font-semibold">{data.name}</div>
-                    <p className="mb-2 font-medium text-sm text-letter">{data.position}</p>
-                  </div>
-                </div>
-                <p className="">{data.message}</p>
-              </div>
-            ))}
-          </div> */}
           <ul className="columns-1 md:columns-2 block">
             {recommendations.map((data, index) => (
               <li key={data.name} className={twMerge('flex-col justify-center text-justify mx-6 md:mx-1 mb-5 shadow-chat p-6 rounded-xl text-title break-inside-avoid bg-second hover:scale-105 duration-300', !more && index > 2 ? 'hidden md:block' : 'flex')}>
@@ -72,7 +58,7 @@ export default function Recommendations() {
                     <p className="mb-2 font-medium text-sm text-letter">{data.position}</p>
                   </div>
                 </div>
-                <p className="text-sm">{data.message}</p>
+                <p className="text-sm text-letter">{data.message}</p>
               </li>
             ))}
           </ul>

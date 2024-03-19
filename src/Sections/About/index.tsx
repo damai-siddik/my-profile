@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "../../Components/Button";
+import groovyWalkAnimation from "./muslim.json";
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const aboutMeData = [
     {
@@ -15,12 +17,10 @@ const aboutMeData = [
 export default function About() {
     return (
         <section id="about" className="pt-8 pb-16 about">
-          <h2 className="text-center text-title text-2xl md:text-4xl font-semibold mb-8">About Me</h2>
-          {/* <span className="text-center block text-sm mb-8">My Introduction</span> */}
-          <div className="flex flex-col md:flex-row md:justify-between items-center gap-8 mx-6">
-            {/* Second Image */}
-            <img src="/damai-2.jpeg" className="w-[200px] h-[200px] rounded-full object-cover" />
-            <div className="flex flex-col gap-4">
+          <h2 className="text-center text-title text-2xl md:text-4xl font-semibold md:mb-8">About Me</h2>
+          <div className="flex flex-col md:flex-row md:justify-between items-center mx-6 relative gap-8">
+            <Player src={groovyWalkAnimation} autoplay loop className="w-[200px]" ></Player>
+            <div className="flex flex-col gap-4 w-full">
               <div className="flex flex-row gap-16 justify-evenly md:justify-start">
                 {aboutMeData.map((data) => (
                   <div key={data.label}>
@@ -32,7 +32,7 @@ export default function About() {
               <p className="text-justify">Experienced in web development, specializing in both client-side and server-side technologies. Proficient in building user interfaces using Angular, React, or Next.js, while also adept at crafting scalable server-side solutions with Express.js or Go. Adept at collaborating within cross-functional teams to deliver high-quality solutions, motivated to learn, and consistently contributing to the success of various projects.</p>
               <Button className='bg-primary text-white w-fit m-auto md:m-0'
                 endIcon={<i className='uil uil-import' />}
-                onClick={() => window.open("/CV-Damai.pdf")}>Download CV</Button>
+                onClick={() => window.open("/Damai Yulianti Siddik - Software Engineer.pdf")}>Download CV</Button>
             </div>
           </div>
         </section>

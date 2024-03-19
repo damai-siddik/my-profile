@@ -33,7 +33,7 @@ module.exports = {
         chat: "0px 16px 24px 0px rgba(96, 97, 112, 0.16), 0px 2px 8px 0px rgba(40, 41, 61, 0.04)",
       },
       animation: {
-        fly: 'fly 5s infinite',
+        fly: 'fly 8s infinite',
       },
       keyframes: {
         fly: {
@@ -42,7 +42,7 @@ module.exports = {
             'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
           },
           "100%": {
-            transform: 'translateY(-150%)',
+            transform: 'translateY(-180%)',
             'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
           },
         },

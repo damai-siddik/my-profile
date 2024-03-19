@@ -2,8 +2,6 @@ import React from 'react';
 import Header from './Sections/Header';
 import Home from './Sections/Home';
 import About from './Sections/About';
-import Qualification from './Sections/Qualification';
-import Feature from './Sections/Feature';
 import Skills from './Sections/Skills';
 import Recommendations from './Sections/Recommendations';
 import Footer from './Sections/Footer';
@@ -19,10 +17,8 @@ function App() {
       <main className='block lg:max-w-[968px] m-auto'>
         <Home />
         <About />
-        <Journey />
-        {/* <Qualification /> */}
-        {/* <Feature /> */}
         <Skills />
+        <Journey />
         <Recommendations />
       </main>
       <Footer />

@@ -33,7 +33,7 @@ export default function Skills() {
                     </div>
                     <div className="grid grid-cols-3 gap-4 grid-flow-row">
                       {skill.tech?.map((tech) => (
-                        <div key={tech} className=" bg-second text-letter rounded-2xl p-1 text-center justify-center font-medium flex items-center">
+                        <div key={tech} className=" bg-primary text-white rounded-2xl p-1 text-center justify-center font-medium flex items-center">
                           {tech}
                         </div>
                       ))}

@@ -25,7 +25,7 @@ export default function LineStepper({data}: LineStepperProps) {
             {data.map((qual, index) => (
                 <div key={`${qual.label} - ${index}`} className="flex flex-row gap-4 relative">
                     <div className="order-last my-2 flex flex-row items-center gap-2 p-4 rounded-lg hover:shadow-chat w-full cursor-pointer group" onClick={() => openLink(qual.link)}>
-                        {!isEmpty(qual.image) && <img src={qual.image} className="w-[250px] h-fit rounded object-contain bg-second p-2" />}
+                        {!isEmpty(qual.image) && <img src={qual.image} className="w-[150px] md:w-[250px] h-fit rounded object-contain bg-second p-2" />}
                         <div className="flex flex-col">
                             <div className="text-sm text-second-lighter mb-3 group-hover:text-primary group-hover:font-semibold">{qual.time}</div>
                             <h3 className="text-base font-semibold text-title">{qual.label}</h3>

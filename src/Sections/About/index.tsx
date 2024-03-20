@@ -17,10 +17,12 @@ const aboutMeData = [
 export default function About() {
     return (
         <section id="about" className="pt-8 pb-16 about">
-          <h2 className="text-center text-title text-2xl md:text-4xl font-semibold md:mb-8">About Me</h2>
+          <h2 className="text-center text-title text-2xl md:text-4xl font-semibold mb-8">About Me</h2>
           <div className="flex flex-col md:flex-row md:justify-between items-center mx-6 relative gap-8">
-            <Player src={groovyWalkAnimation} autoplay loop className="w-[200px]" ></Player>
-            <div className="flex flex-col gap-4 w-full">
+            <div className="flex flex-col items-center w-full md:w-1/2">
+              <Player src={groovyWalkAnimation} autoplay loop className="w-[200px] md:w-[270px]" ></Player>
+            </div>
+            <div className="flex flex-col gap-4 w-full md:w-1/2">
               <div className="flex flex-row gap-16 justify-evenly md:justify-start">
                 {aboutMeData.map((data) => (
                   <div key={data.label}>
